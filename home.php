@@ -1,5 +1,6 @@
-<?php require("includes/dbcon.php") ?>
-<?php session_start(); 
+<?php
+require("includes/dbcon.php");
+session_start();
 ?>
 
 <!DOCTYPE html>

@@ -6,3 +6,10 @@ export function createErrorMssg(msg, parentId) {
 	const parentEl = document.getElementById(parentId);
 	parentEl.insertBefore(errorPrgrph, parentEl.querySelector("#login"));
 }
+
+export function removeErrorMssg(ms) {
+	setTimeout(() => {
+		const errorEl = document.getElementById("error-mssg");
+		errorEl.remove();
+	}, ms);
+}

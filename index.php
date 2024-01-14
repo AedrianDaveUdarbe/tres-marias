@@ -91,18 +91,22 @@ session_start();
     }
     ?>
 
+
     <!--Login form-->
-    <div>
-        <form action="index.php" method="post">
-            <h1>LOGIN</h1>
-
-            <label for="">Username</label>
-            <input type="text" name="username" id="" placeholder="Type your username"><br>
-
-            <label for="">Password</label>
-            <input type="password" name="password" id="" placeholder="Type your password"><br>
-            <button type="submit" name="login" class="btn btn-primary">Login</button>
-            <a href="registration.php">Click here to register an account</a>
+    <div class="form-container">
+        <form class="form-login" action="index.php" method="post">
+            <h1 class="mb-3 fw-normal">LOGIN</h1>
+            <div class="form-group">
+                <label class="control-label" for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username">
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="password">Password</label>
+                <input type="password" class="form-control" id="password">
+            </div>
+            <button type="submit" name="login" href="#" class="btn btn-primary">LOGIN</button>
+            <a href="registration.php" class="btn btn-link">Click here to register an account</a>
+            <p class="mt-5 mb-3 text-body-secondary">© 2017–2023</p>
         </form>
     </div>
 

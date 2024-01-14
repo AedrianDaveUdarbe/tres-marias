@@ -61,7 +61,7 @@
             //display the picture of the product
             $product_pics = "SELECT * FROM product_pics WHERE productID = '$productID'";
             foreach($conn->query($product_pics) as $product_pic){
-                echo "<img src='product-pics/".$product_pic['filename']."' placeholder='product-image' class='' <br>";
+                echo "<img src='assets/imgs/".$product_pic['filename']."' placeholder='product-image' class='' <br>";
             }
 
             echo "<div class= 'desc'>";

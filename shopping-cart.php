@@ -115,7 +115,7 @@
            <tr>
             <td class="checkbox">
                 
-                <?php echo "<img src='product-pics/".$description['filename']."' placeholder='product-image' class=''";?>           
+                <?php echo "<img src='assets/imgs/".$description['filename']."' placeholder='product-image' class=''";?>           
         </td>       
             <td><?php echo "<h3>".$description['name']."</h3><br>";?></td>
             <td><?php echo "<h3>".$description['price']."</h3><br>";?></td>
@@ -126,7 +126,7 @@
             <td>
                 <form action="shopping-cart.php" method="get">
                     <input type="hidden" name="cartID" value="<?php echo $description['cartID']?>">
-                     <button class="remove" name="remove"><img src="pics/remove.png" alt="" style = ></button>  
+                     <button class="remove" name="remove"><img src="assets/icons/remove.png" alt="" style = ></button>  
                 </form>
 
             </td>

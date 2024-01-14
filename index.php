@@ -50,9 +50,7 @@ session_start();
 
                 //to count if the the account exist
                 if ($count > 0) {
-
-                    //to get the user's name data
-                    $_SESSION["name"] = $userdata["name"];
+      $_SESSION["username"] = $userdata["username"];
                     header("Location: home.php");
                 } else {
                     echo "username or password is wrong!";

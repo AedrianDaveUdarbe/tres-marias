@@ -53,8 +53,16 @@ session_start();
       $_SESSION["username"] = $userdata["username"];
                     header("Location: home.php");
                 } else {
-                    echo "username or password is wrong!";
-                }
+?>
+      <script type="module">
+        import {
+          createErrorMssg,
+          removeErrorMssg
+        } from './errorMessage.js';
+        createErrorMssg("Unauthorized username and password.", "login-form");
+        removeErrorMssg(5000);
+      </script>
+<?php
             }
         } catch (Exception $e) {
             echo "error " . $e->getMessage();

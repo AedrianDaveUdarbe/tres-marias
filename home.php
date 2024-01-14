@@ -17,21 +17,51 @@ session_start();
   </style>
 </head>
 <body>
-
-      <!--Nav Bar-->
-      <div>
-        <!--Add Logo picture-->
-    <img src="" alt="logo">
-    <a href="home.php">Home</a>
-    <a href="product.php">Products<c/a>
-    <a href="shopping-cart.php">Shopping Cart</a>
-    <a href="contact-us.php">Contact Us</a>
-    <a href="about-us.php">About Us</a>
-    <a href="review.php">Review</a>
-    <a href="faq.php">FAQ</a>
-    <a href="my-account.php">My Account</a>
-    <!--add the searchbar-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <img class="navbar-brand-logo me-3" src="./assets/imgs/tres-marias-logo.png" alt="tres marias logo">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor04" aria-controls="navbarColor04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor04">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="home.php">Home
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.php">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shopping-cart.php">Shopping Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact-us.php">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about-us.php">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact-us.php">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="review.php">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.php">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="my-account.php">My Account</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-sm-2" type="search" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
     </div>
+  </nav>
 
     <!--User's Name-->
     <?php

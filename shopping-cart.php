@@ -71,12 +71,9 @@
             border-style: none;
             cursor: pointer;    
         }
-        .checkbox{
-            display: flex;
-            flex-direction: row;
-            grid-gap: 20px;
-        }
-       
+       .checkout{
+        float: right;
+       }
     </style>
 </head>
 <body>
@@ -99,10 +96,7 @@
 
     <table>
         <thead>
-            <td class="checkbox"><form action="" method="post">
-                <input type="checkbox" name="checkbox" id="">
-            </form>
-            ALL</td>
+            <td></td>
             <td>PRODUCT</td>
             <td>PRICE</td>
             <td>QUANTITY</td>
@@ -120,7 +114,7 @@
             ?>
            <tr>
             <td class="checkbox">
-                <form action="" method="get"><input type="checkbox" class="checkbox" name="selected_products" value="<?php echo $description['cartID']; ?>"></form>
+                
                 <?php echo "<img src='product-pics/".$description['filename']."' placeholder='product-image' class=''";?>           
         </td>       
             <td><?php echo "<h3>".$description['name']."</h3><br>";?></td>
@@ -143,11 +137,20 @@
         }?>
         </tbody>
     </table>
+
+        <div class="checkout">
+                <form action="checkout.php" method="post">
+                    <button><a href="home.php">HOMEPAGE</a></button>
+                    <input type="submit" value="CHECKOUT" name="checkout">
+                </form>
+        </div>
+   
 </body>
 </html>
 
 
-<?php if(isset($_GET["remove"])){
+<?php
+if(isset($_GET["remove"])){
     //remove the product into cart
 
    try{

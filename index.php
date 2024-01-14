@@ -1,28 +1,7 @@
 <?php require("includes/dbcon.php");
 session_start();
-?>
-<!DOCTYPE html>
-<html lang="en">
+if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['login'])) {
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- bootswatch theme -->
-    <link rel="stylesheet" href="https://bootswatch.com/3/lumen/bootstrap.min.css">
-</head>
-
-<body>
-
-    <?php if (isset($_SESSION['message'])) {
-        echo '<h2>' . $_SESSION['message'] . '</h2>';
-
-        // Clear the session message to prevent it from showing again
-        unset($_SESSION['message']);
-    }
-    ?>
-
-    <?php if (isset($_POST['login'])) {
         try {
             $username = $_POST["username"];
             $password = $_POST["password"];

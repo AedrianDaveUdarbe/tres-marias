@@ -5,9 +5,10 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tres Marias</title>
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <style>
@@ -15,7 +16,9 @@ session_start();
       width: 50px;
     }
   </style>
+
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -63,50 +66,53 @@ session_start();
     </div>
   </nav>
 
-    <!--User's Name-->
-    <?php
+  <!--User's Name-->
+  <?php
   if (isset($_SESSION["username"])) {
     echo "<h3>Login Success, Welcome " . $_SESSION["username"] . "</h3>";
-        } else {
-            // Redirect to index.php if the name is not set in the session
-            header("Location: index.php");
-            exit();
-        }        
-    ?>
+  } else {
+    // Redirect to index.php if the name is not set in the session
+    header("Location: index.php");
+    exit();
+  }
+  ?>
 
-    <!--Introduction-->
-   <div>
-        <h1>Welcome to Tres Marias <br> Cakes and Pastries</h1>
-            <p>Indulge in the Sweet Delights of Aparri, Cagayan</p><br><br>
+  <!--Introduction-->
+  <div>
+    <h1>Welcome to Tres Marias <br> Cakes and Pastries</h1>
+    <p>Indulge in the Sweet Delights of Aparri, Cagayan</p><br><br>
 
-            <p>Discover the artistry and passion that defines Tres Marias Bakeshop. Nestled in the heart of Aparri, Cagayan, our bakeshop is a haven for those seeking exquisite treats and delightful moments.</p><br><br><br>
-   </div>
+    <p>Discover the artistry and passion that defines Tres Marias Bakeshop. Nestled in the heart of Aparri, Cagayan, our bakeshop is a haven for those seeking exquisite treats and delightful moments.</p><br><br><br>
+  </div>
 
-   <!--Main Products-->
-    <div>
-        <p>OUR BEST SELLERS</p>
-        <h3>Favorites</h3>
-        <a href="">Mangoe Supreme Cake</a><br>
-        <a href="">Mangoe Supreme Cake</a><br>
-        <a href="">Mangoe Supreme Cake</a><br>
-        <a href="">Mangoe Supreme Cake</a><br><br>
-    </div>
-    
-    <div> 
-        <h1>GET A CAKE</h1><br>
-        <h4>NEW AND IMPROVED</h4>
-        <h2>Yema Caramel Cake</h2>
-        <h4>Experience pure bliss with our updated Yema Caramel Cake - a revamped version of our classic favorite!</h4><br>
-        
-        <button><a href="product.php">START ORDER</a></button>
-    </div>
+  <!--Main Products-->
+  <div>
+    <p>OUR BEST SELLERS</p>
+    <h3>Favorites</h3>
+    <a href="">Mangoe Supreme Cake</a><br>
+    <a href="">Mangoe Supreme Cake</a><br>
+    <a href="">Mangoe Supreme Cake</a><br>
+    <a href="">Mangoe Supreme Cake</a><br><br>
+  </div>
 
-    <!--add footer-->
-    <div>
-        <p>Indulge in the Sweet Delights of Aparri, Cagayan!</p>
+  <div>
+    <h1>GET A CAKE</h1><br>
+    <h4>NEW AND IMPROVED</h4>
+    <h2>Yema Caramel Cake</h2>
+    <h4>Experience pure bliss with our updated Yema Caramel Cake - a revamped version of our classic favorite!</h4><br>
 
-        <a href="">fb: Marias Bakeshop</a><br>
-        <a href="">ig: tres_mariascakes</a>
-    </div>
+    <button><a href="product.php">START ORDER</a></button>
+  </div>
+
+  <!--add footer-->
+  <div>
+    <p>Indulge in the Sweet Delights of Aparri, Cagayan!</p>
+
+    <a href="">fb: Marias Bakeshop</a><br>
+    <a href="">ig: tres_mariascakes</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -23,7 +23,11 @@
             <tr>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>
+                  <form action="" method="post">
+                    <input type="submit" value="buy again">
+                  </form>
+                </td>
                 <td></td>
                 <td></td>
             </tr>

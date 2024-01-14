@@ -67,6 +67,28 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['login'])) {
     <!-- bootstrap js cdn -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
+  <script>
+    const usernameInpt = document.getElementById("username");
+    const passwordInpt = document.getElementById("password");
+    const loginBtn = document.getElementById("login");
+    const inputs = [usernameInpt, passwordInpt]
+
+    validateInput();
+    inputs.forEach(input => {
+      input.addEventListener("input", () => {
+        validateInput()
+      })
+    });
+
+    function validateInput() {
+      if (usernameInpt.value.length && passwordInpt.value.length) {
+        loginBtn.removeAttribute("disabled");
+      } else {
+        loginBtn.setAttribute("disabled", "disabled");
+      }
+    }
+  </script>
+
 </body>
 
 </html>

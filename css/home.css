@@ -1,0 +1,4 @@
+.introduction{
+  display: flex;
+  flex-direction: row;
+}

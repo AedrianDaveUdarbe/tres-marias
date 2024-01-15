@@ -76,7 +76,7 @@
                     <td>Subtotal</td>
                 </tr>
             </thead>
-            <?php if(isset($_POST['checkout'])){
+            <?php if(isset($_POST['checkout']) || isset($_POST['buy-now'])){
                 $order_total=0;
                 $total_items=0;
                 $shipping_fee = 30;

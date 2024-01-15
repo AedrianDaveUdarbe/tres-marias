@@ -46,7 +46,7 @@
        .product_pic{
             width: 400px;
             height: 300px;
-            object-fit: cover;
+            object-fit: contain;
             border: 1px black solid;
        }
        .footer{

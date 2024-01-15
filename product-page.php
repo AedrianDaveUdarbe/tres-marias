@@ -49,6 +49,18 @@
             object-fit: cover;
             border: 1px black solid;
        }
+       .footer{
+          background-color: #76453B;
+         
+         }
+         .footer{
+            overflow: hidden;
+         }
+         .footer-img img{
+          width: 300px;
+          height: 300px;
+         }
+        
     </style>
 </head>
 <body>

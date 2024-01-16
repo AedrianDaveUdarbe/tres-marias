@@ -1,0 +1,115 @@
+
+<?php require("includes/dbcon.php");
+    session_start();
+    
+    if(isset($_POST["register"])){
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $phone_number = $_POST["phone_number"];
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        $query = "INSERT INTO users(name,email,phone_number,username,password) VALUES(:name,:email,:phone_number,:username,:password)";
+        $query_run = $conn->prepare($query);
+
+        $data = [
+            ":name" =>$name,
+            ":email" =>$email,
+            ":phone_number" =>$phone_number,
+            ":username" =>$username,
+            ":password" =>$password
+
+        ];
+
+        $query_exec = $query_run->execute($data);
+
+        if($query_exec){
+            $_SESSION["message"]="Created account successfuly";
+            header("Location: index.php");
+        }
+        else
+        {
+            $_SESSION["message"]="Not created";
+        }
+    }
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+  <style>
+    .form-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .form-register {
+      max-width: 500px;
+      min-width: 350px;
+      padding: 1rem;
+    }
+
+    .form-register input[type="email"] {
+      margin-bottom: -1px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .form-register input[type="password"] {
+      margin-bottom: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    </style>
+</head>
+<body>
+    <!--Registration Form-->
+    <div class="form-container">
+        <form class="form-register bg-light shadow-lg p-5 mb bg-body-tertiary rounded-5" action="registration.php" method="post">
+
+         <h1 class="mb-3 fw-normal text-center">REGISTER AN ACCOUNT"></h1>  
+            <div class="form-group">
+                 <label class="control-label" for="">Name</label>
+                 <input class="form-control"type="text" name="name" id="" placeholder="Type your full name"><br>
+            </div>
+            
+            <div class="form-group">
+                 <label class="control-label" for="">Email</label>
+                 <input class="form-control" type="email" name="email" id="" placeholder="Type your email"><br>
+                </div>
+            
+            <div class="form-group">
+                 <label class="control-label" for="">Phone Number</label>
+                <input class="form-control" type="number" name="phone_number" id="" placeholder="Type your phone number"><br>
+                </div>
+            
+            <div class="form-group">
+                 <label class="control-label" for="">Phone Number</label>
+                <input class="form-control" type="number" name="phone_number" id="" placeholder="Type your phone number"><br>
+                </div>
+
+         
+            <div class="form-group">
+                <label class="control-label" for="">Username</label>
+                <input class="form-control" type="text" name="username" id="" placeholder="Type your username"><br>
+                </div>
+            <div class="form-group">
+                <label class="control-label" for="">Password</label>
+                <input class="form-control" type="password" name="password" id="" placeholder="Type your password"><br>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100" name="register">REGISTER</button>
+        </form>
+    </div>
+</body>
+</html>

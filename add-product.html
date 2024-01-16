@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .form-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+        }
+    
+        .form-register {
+          width: 500px;
+          padding: 1rem;
+          background-color: #D9D9D9;
+        }
+    
+        .form-register input[type="email"] {
+          margin-bottom: -1px;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+    
+        .form-register input[type="password"] {
+          margin-bottom: 10px;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+        </style>
+</head>
+<body>
+    <div class="form-container">
+        <form class="form-register shadow-lg p-5 mb bg-body-tertiary rounded-5" action="registration.php" method="post">
+
+         <h1 class="mb-3 fw-normal text-center">ADD PRODUCT</h1>  
+            <div class="form-group">
+                 <label class="control-label" for="">PICTURE</label>
+                 <input class="form-control"type="file" name="picture" id="" placeholder="Filename picture of the product"><br>
+            </div>
+            
+            <div class="form-group">
+                 <label class="control-label" for="">Product Name</label>
+                 <input class="form-control" type="text" name="product-name" id="" placeholder="Type your email"><br>
+                </div>
+            
+            <div class="form-group">
+                 <label class="control-label" for="">Description</label>
+                 <textarea rows="5"  cols="30" class="form-control" type="text" name="description" id="" placeholder="Description"></textarea><br>
+                </div>
+            
+            <div class="form-group">
+                 <label class="control-label" for="">Price</label>
+                <input class="form-control" type="number" name="price" id="" placeholder="Type your phone number"><br>
+                </div>
+
+         
+            <div class="form-group">
+                <label class="control-label" for="">Stock</label>
+                <input class="form-control" type="number" name="stock" id="" placeholder="Type your username"><br>
+                </div>
+
+            <button type="submit" class="btn btn-success w-100" name="add">ADD</button>
+        </form>
+    </div>
+</body>
+</html>
